@@ -1,5 +1,5 @@
 {
-  "name": "react-ts-demo",
+  "name": "react-ts-ssr",
   "version": "0.0.0",
   "scripts": {
     "dev": "node server",
