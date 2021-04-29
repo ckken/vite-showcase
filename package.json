@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "pnpm run --filter={demo1,@vitecase/demo2} --parallel dev",
+    "build": "pnpm run --filter={demo1,@vitecase/demo2} --parallel build",
+    "start": "pnpm run --filter={demo1,@vitecase/demo2} --parallel start"
   },
   "author": "",
   "license": "ISC"
