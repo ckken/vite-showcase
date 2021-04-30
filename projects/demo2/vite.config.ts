@@ -21,6 +21,8 @@ export default defineConfig({
     alias: [
       {find: /^~/, replacement: ''},
       {find: 'src/', replacement: path.join(root, '/')},
+      {find: 'react', replacement: 'https://cdn.skypack.dev/react'},
+      {find: 'react-dom', replacement: 'https://cdn.skypack.dev/react-dom'},
     ],
   },
   build: {

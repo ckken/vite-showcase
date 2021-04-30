@@ -3,6 +3,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 import legacy from '@vitejs/plugin-legacy'
 import {defineConfig} from 'vite'
 import path from 'path'
+// import {mutateConfigPlugin,partialConfigPlugin} from './vite-config-plugin'
 const root = path.join(process.cwd(), 'src')
 
 export default defineConfig({
@@ -12,6 +13,8 @@ export default defineConfig({
     legacy({
       targets: ['IE 11'],
     }),
+    // mutateConfigPlugin(),
+    // partialConfigPlugin()
   ],
   css: {
     preprocessorOptions: {less: {javascriptEnabled: true}},
@@ -20,6 +23,9 @@ export default defineConfig({
     alias: [
       {find: /^~/, replacement: ''},
       {find: 'src/', replacement: path.join(root, '/')},
+      {find: 'react', replacement: 'https://cdn.skypack.dev/react'},
+      {find: 'react-dom', replacement: 'https://cdn.skypack.dev/react-dom'},
+      {find: 'demo2/app', replacement: 'http://localhost:3002/@fs/Users/ken/Desktop/develop/Labs/vite-demo/projects/demo2/lib/App.tsx'},
     ],
   },
   build: {
