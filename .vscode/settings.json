@@ -1,0 +1,8 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib", //支持 ts css module type check
+  "typescript.enablePromptUseWorkspaceTsdk": true   //支持 ts css module type check
+}
+

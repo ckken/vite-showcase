@@ -9,5 +9,8 @@
     "start": "pnpm run --filter={demo1,@vitecase/demo2} --parallel start"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@efox/eslint-config-react-prittier-ts": "^1.2.5"
+  }
 }

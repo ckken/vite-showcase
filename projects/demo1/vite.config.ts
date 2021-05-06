@@ -23,9 +23,8 @@ export default defineConfig({
     alias: [
       {find: /^~/, replacement: ''},
       {find: 'src/', replacement: path.join(root, '/')},
-      {find: 'react', replacement: 'https://cdn.skypack.dev/react'},
-      {find: 'react-dom', replacement: 'https://cdn.skypack.dev/react-dom'},
-      {find: 'demo2/app', replacement: 'http://localhost:3002/@fs/Users/ken/Desktop/develop/Labs/vite-demo/projects/demo2/lib/App.tsx'},
+      // {find: 'react', replacement: 'https://cdn.skypack.dev/react'},
+      // {find: 'react-dom', replacement: 'https://cdn.skypack.dev/react-dom'},
     ],
   },
   build: {

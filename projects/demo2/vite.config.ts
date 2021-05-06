@@ -21,23 +21,21 @@ export default defineConfig({
     alias: [
       {find: /^~/, replacement: ''},
       {find: 'src/', replacement: path.join(root, '/')},
-      {find: 'react', replacement: 'https://cdn.skypack.dev/react'},
-      {find: 'react-dom', replacement: 'https://cdn.skypack.dev/react-dom'},
     ],
   },
   build: {
     outDir: path.join(process.cwd(), 'dist'),
     emptyOutDir: true,
-    minify:false,
+    minify: false,
     // watch:{},
-    cssCodeSplit:true,
+    cssCodeSplit: true,
     // ============== 库模式 ============================
     //当设置为 true，构建后将会生成 manifest.json 文件，映射没有被 hash 的资源文件名和它们的 hash 版本。可以为一些服务器框架渲染时提供正确的资源引入链接。
-    manifest:true,
+    manifest: true,
     lib: {
-      entry: path.resolve(__dirname, 'lib/App.tsx'),
-      name: 'demo2',
-      fileName:"App"
+      entry: path.resolve(root, 'components/App'),
+      name: 'App',
+      fileName: 'index',
     },
     rollupOptions: {
       // 请确保外部化那些你的库中不需要的依赖
@@ -45,10 +43,10 @@ export default defineConfig({
       output: {
         // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
         globals: {
-          react: 'React'
-        }
-      }
-    }
+          react: 'React',
+        },
+      },
+    },
   },
   server: {
     port: 3002,
