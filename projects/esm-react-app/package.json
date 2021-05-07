@@ -1,5 +1,5 @@
 {
-  "name": "@vitecase/demo2",
+  "name": "esm-react-app",
   "version": "0.0.0",
   "files": [
     "dist"
@@ -15,7 +15,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview --port 3002",
+    "start": "vite preview --port 3333",
     "lint": "eslint ./src --ext js,ts,tsx --fix"
   },
   "dependencies": {

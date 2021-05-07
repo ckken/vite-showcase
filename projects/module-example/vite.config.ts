@@ -1,6 +1,6 @@
 import reactRefresh from '@vitejs/plugin-react-refresh'
 import tsconfigPaths from 'vite-tsconfig-paths'
-import legacy from '@vitejs/plugin-legacy'
+// import legacy from '@vitejs/plugin-legacy'
 import {defineConfig} from 'vite'
 import path from 'path'
 const root = path.join(process.cwd(), 'src')
@@ -21,6 +21,9 @@ export default defineConfig({
     alias: [
       {find: /^~/, replacement: ''},
       {find: 'src/', replacement: path.join(root, '/')},
+      {find: '@cdn', replacement: 'https://cdn.skypack.dev'},
+      {find: 'react', replacement: 'https://cdn.skypack.dev/react'},
+      {find: 'react-dom', replacement: 'https://cdn.skypack.dev/react-dom'},
     ],
   },
   build: {
@@ -36,8 +39,9 @@ export default defineConfig({
       entry: path.resolve(root, 'components/App'),
       name: 'App',
       fileName: 'index',
+      formats: ['es'],
     },
-    rollupOptions: {
+    /* rollupOptions: {
       // 请确保外部化那些你的库中不需要的依赖
       external: ['react'],
       output: {
@@ -46,7 +50,7 @@ export default defineConfig({
           react: 'React',
         },
       },
-    },
+    }, */
   },
   server: {
     port: 3002,

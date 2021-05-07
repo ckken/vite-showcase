@@ -1,0 +1,12 @@
+{
+  "extends": "@efox/emp-tsconfig",
+  "compilerOptions": {
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src",
+    "types"
+  ]
+}
