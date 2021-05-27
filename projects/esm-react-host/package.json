@@ -1,10 +1,21 @@
 {
-  "name": "demo1",
+  "name": "esm-react-host",
   "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "vite preview --port 3001",
+    "start": "vite preview --port 3333",
     "lint": "eslint ./src --ext js,ts,tsx --fix"
   },
   "dependencies": {
@@ -14,8 +25,7 @@
     "antd": "^4.15.3",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-router-dom": "^5.2.0",
-    "vite-plugin-resolve-externals": "^0.1.0"
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
@@ -25,11 +35,12 @@
     "@types/node": "^15.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/react-router": "^5.1.14",
     "@vitejs/plugin-legacy": "^1.3.2",
     "@vitejs/plugin-react-refresh": "^1.3.1",
     "husky": "4.3.8",
     "typescript": "^4.1.2",
-    "vite": "^2.2.4",
+    "vite": "^2.3.2",
     "vite-tsconfig-paths": "^3.3.9"
   },
   "husky": {
